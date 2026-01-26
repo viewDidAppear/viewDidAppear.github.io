@@ -39,6 +39,7 @@ body {
   color: var(--text);
   transition: background var(--medium) var(--ease),
               color var(--medium) var(--ease);
+  padding: 1em;
 }
 
 /* --------------------
@@ -114,7 +115,6 @@ animation-delay: calc(var(--ri) * 24ms);
   z-index: 1000;
   padding-top: calc(var(--header-height, 0px) + 10px);
   width: 100%;
-  max-width: 1600px;
 }
 
 .tile {
@@ -126,10 +126,10 @@ animation-delay: calc(var(--ri) * 24ms);
   justify-content: flex-end;
   align-items: flex-start;
   background: var(--accent);
-  padding: 0.5rem;
+  padding: 0.3em;
   border-radius: 0;
   font-weight: 900;
-  font-size: clamp(20pt, 44pt, 28pt);
+  font-size: 5em;
   cursor: pointer;
   position: relative;
   touch-action: manipulation;
@@ -205,7 +205,7 @@ line-height: 1.6;
   font-family: "Seed-Regular", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   justify-content: center;
   align-items: center;
-  font-size: clamp(18pt);
+  font-size: 3em;
 }
 
 /* ---- ABSOLUTE TRANSFORM RESET (ANTI-FLIP) ---- */
