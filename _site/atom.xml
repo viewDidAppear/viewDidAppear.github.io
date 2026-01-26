@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title></title>
-  <id>http://localhost:4000</id>
-  <link href="http://localhost:4000" />
-  <link href="http://localhost:4000/atom.xml" rel="self" />
-  <updated>2026-01-27T03:36:50+09:00</updated>
+  <id>http://viewdidappear.github.io</id>
+  <link href="http://viewdidappear.github.io" />
+  <link href="http://viewdidappear.github.io/atom.xml" rel="self" />
+  <updated>2026-01-27T03:43:46+09:00</updated>
   <rights>Copyright 2021, {"name"=>"Ben Dietzkis", "bio"=>"I make apps, and I relocated from Melbourne to Tokyo in 2018. I'm a Senior Software Engineer, so I can handle all your tech needs.", "url"=>nil}</rights>
   <author>
     <name>{"name"=>"Ben Dietzkis", "bio"=>"I make apps, and I relocated from Melbourne to Tokyo in 2018. I'm a Senior Software Engineer, so I can handle all your tech needs.", "url"=>nil}</name>

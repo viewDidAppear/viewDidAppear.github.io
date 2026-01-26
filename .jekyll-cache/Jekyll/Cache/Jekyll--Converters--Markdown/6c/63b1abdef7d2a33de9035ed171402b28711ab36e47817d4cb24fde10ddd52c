@@ -1,0 +1,28 @@
+I"P<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
+
+<div class="tile" data-href="/tiles/basics/" role="link" tabindex="0" data-accent="fluff" data-accent-contrast="fluff-accent">
+BASICS
+</div>
+
+<div class="tile" data-href="/tiles/hobbies" role="link" tabindex="1" data-accent="poison" data-accent-contrast="poison-accent">
+HOBBIES
+</div>
+
+<div class="tile" data-href="/tiles/likes" role="link" tabindex="2" data-accent="busy" data-accent-contrast="busy-accent">
+LIKES
+</div>
+
+<div class="tile" data-href="/tiles/values" role="link" tabindex="3" data-accent="zoom" data-accent-contrast="zoom-accent">
+VALUES
+</div>
+
+<div class="tile" data-href="/tiles/reviews" role="link" tabindex="4" data-accent="meeting" data-accent-contrast="meeting-accent">
+REVIEWS
+</div>
+
+<div class="tile" data-href="http://instagram.com/this_is_a_ben_desu" role="link" tabindex="5" data-accent="giraffe" data-accent-contrast="giraffe-accent">
+INSTA ;)
+</div>
+:ET
