@@ -1,50 +1,41 @@
 # Title of your blog; shows in the header
-title: "turntable"
-baseurl: "" # the subpath of your site, e.g. /blog
-email: blog@ggggg.wtf
-permalink:      /:year-:month-:day/:title
-description: "The sleek, modern way to listen to your favorite tunes.
-Inspired by the Metro design language."
-
-# Your name. Will show in your footer + sidebar
-author: "Ben Johnson"
+title: Hi
+description: A modern personal profile
+markdown: kramdown
+theme: null
+author: "Ben Dietzkis"
 
 ppurl: "http://viewdidappear.github.io/viewDidAppear/pp.html"
 url: "http://viewdidappear.github.io"
-# baseurl: ""
+baseurl: ""
 
 # Social Accounts
 
-twitter: viewdidappear
 github_url: https://github.com/viewDidAppear
-mastodon_url: https://famichiki.jp/@viewDidLoad
-instagram_url: okokokjeez
+instagram_url: this_is_a_ben_desu
 
 # Other
 
-markdown: kramdown
 include:
   - _pages
-permalink: pretty
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
+  - tiles
+# permalink: pretty
+# plugins:
+  # - jekyll-feed
+  # - jekyll-paginate
+  # - jekyll-seo-tag
   # - jemoji #Uncomment this to allow emoji in your post
-
-paginate: 5
-paginate_path: "/page/:num"
 
 # SCSS
 
-sass:
-  sass_dir: _sass
-  style: :compressed
+# sass:
+  # sass_dir: _sass
+  # style: :compressed
 
 # Author settings
 author:
-  - name: "Ben Johnson"
-    bio: "I play with Xcode and make things, and I relocated from Melbourne, Australia to Tokyo, Japan in 2018. Past workplaces include jtribe apps, WeTV iflix and Mercari Inc, but now I'm a Senior iOS Software Engineer at PayPay Corporation."
+  - name: "Ben Dietzkis"
+    bio: "I make apps, and I relocated from Melbourne to Tokyo in 2018. I'm a Senior Software Engineer, so I can handle all your tech needs."
     url: 
 
 # Build Settings
