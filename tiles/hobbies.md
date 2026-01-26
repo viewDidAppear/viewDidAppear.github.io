@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Basics"
+title: "Hobbies"
 ---
 
 Basics about Ben (TBA)

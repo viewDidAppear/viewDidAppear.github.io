@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Basics"
+title: "Values"
 ---
 
 Basics about Ben (TBA)

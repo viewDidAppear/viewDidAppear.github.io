@@ -113,8 +113,8 @@ animation-delay: calc(var(--ri) * 24ms);
   position: relative;
   z-index: 1000;
   padding-top: calc(var(--header-height, 0px) + 10px);
-  max-width: 1200px;
   width: 100%;
+  max-width: 1600px;
 }
 
 .tile {
