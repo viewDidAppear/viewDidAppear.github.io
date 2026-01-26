@@ -109,7 +109,7 @@ animation-delay: calc(var(--ri) * 24ms);
 -------------------- */
 .tiles {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 640px));
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
   position: relative;
   z-index: 1000;
   padding-top: calc(var(--header-height, 0px) + 10px);
