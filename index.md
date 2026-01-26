@@ -20,7 +20,7 @@ crossorigin
 >
 
 <div class="tile"
-data-href="/tiles/basics/"
+data-href="/tiles/basics"
 role="link"
 tabindex="0"
 data-accent="fluff"

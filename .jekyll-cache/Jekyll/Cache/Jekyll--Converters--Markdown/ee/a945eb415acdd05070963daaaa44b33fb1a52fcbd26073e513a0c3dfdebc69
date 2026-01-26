@@ -1,8 +1,8 @@
-I"P<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+I"O<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
 <link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
-<div class="tile" data-href="/tiles/basics/" role="link" tabindex="0" data-accent="fluff" data-accent-contrast="fluff-accent">
+<div class="tile" data-href="/tiles/basics" role="link" tabindex="0" data-accent="fluff" data-accent-contrast="fluff-accent">
 BASICS
 </div>
 

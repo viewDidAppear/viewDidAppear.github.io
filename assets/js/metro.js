@@ -4,61 +4,75 @@ const page = document.getElementById('metro-page');
 if (!tilesContainer) return;
 
 const tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
-const EXIT_DURATION = 500;
 
-function navigateWithAnimation(href) {
-if (!href) return;
+function navigateWithAnimation(href, tile) {
+if (!href || href === 'undefined') return;
 
+tile.classList.add('is-pressed'); // optional immediate press
 tilesContainer.classList.add('is-exiting');
 page?.classList.add('is-exiting');
 
-setTimeout(() => {
-window.location.href = href;
-}, EXIT_DURATION);
+// ❌ Use requestAnimationFrame chaining instead of setTimeout
+requestAnimationFrame(() => {
+requestAnimationFrame(() => {
+window.location.assign(href);
+});
+});
 }
 
 tiles.forEach(tile => {
 const href = tile.dataset.href;
 if (!href) return;
 
-function pressAndNavigate() {
+function pressTile() {
 tile.classList.add('is-pressed');
-
-// 🔥 Force a paint before exit animation
-requestAnimationFrame(() => {
-requestAnimationFrame(() => {
-navigateWithAnimation(href);
-});
-});
 }
 
-tile.addEventListener('touchstart', e => {
-e.stopPropagation();
-pressAndNavigate();
+function releaseTile() {
+const currentHref = tile.dataset.href;
+if (!currentHref) return;
+navigateWithAnimation(currentHref, tile);
+tile.classList.remove('is-pressed');
+}
+
+function cancelPress() {
+tile.classList.remove('is-pressed');
+}
+
+// Pointer events
+tile.addEventListener('pointerdown', pressTile);
+tile.addEventListener('pointerup', e => {
+if (e.target.closest('.tile') === tile) releaseTile();
+else cancelPress();
+});
+tile.addEventListener('pointerleave', cancelPress);
+
+// Touch events
+tile.addEventListener('touchstart', pressTile, { passive: true });
+tile.addEventListener('touchend', e => {
+const touch = e.changedTouches[0];
+if (document.elementFromPoint(touch.clientX, touch.clientY)?.closest('.tile') === tile) {
+releaseTile();
+} else cancelPress();
 }, { passive: true });
+tile.addEventListener('touchcancel', cancelPress);
 
-tile.addEventListener('pointerdown', e => {
-pressAndNavigate();
-});
-
-tile.addEventListener('click', e => {
-e.preventDefault();
-pressAndNavigate();
-});
-
+// Keyboard support
 tile.addEventListener('keydown', e => {
 if (e.key === 'Enter' || e.key === ' ') {
 e.preventDefault();
-pressAndNavigate();
+pressTile();
+releaseTile();
 }
 });
+
+// Prevent default click
+tile.addEventListener('click', e => e.preventDefault());
 });
 
-// BFCache reset
+// BFCache / back button reset
 window.addEventListener('pageshow', () => {
-  tiles.forEach(tile => {
-tile.classList.remove('is-pressed');
-});
+tiles.forEach(tile => tile.classList.remove('is-pressed'));
 tilesContainer.classList.remove('is-exiting');
 page?.classList.remove('is-exiting');
 });
