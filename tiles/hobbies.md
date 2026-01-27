@@ -3,6 +3,38 @@ layout: page
 title: "My Hobbies"
 ---
 
+<link
+rel="preload"
+href="/assets/fonts/LINESeedSans_W_He.woff2"
+as="font"
+type="font/woff2"
+crossorigin
+>
+
+<link
+rel="preload"
+href="/assets/fonts/LINESeedSans_W_He.woff"
+as="font"
+type="font/woff"
+crossorigin
+>
+
+<link
+rel="preload"
+href="/assets/fonts/LINESeedSans_W_Rg.woff2"
+as="font"
+type="font/woff2"
+crossorigin
+>
+
+<link
+rel="preload"
+href="/assets/fonts/LINESeedSans_W_Rg.woff"
+as="font"
+type="font/woff"
+crossorigin
+>
+
 <div class="page-stage">
 <div class="tile-small"
 data-accent="fluff"

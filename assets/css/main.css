@@ -234,8 +234,8 @@ font-weight: 500;
 letter-spacing: -0.04em;
 font-family: "Seed-Regular", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 width: 100;
-max-width: 1000px;
-font-size: clamp(28pt, 8vw, 32pt);
+max-width: 600px;
+font-size: clamp(34pt, 12vw, 38pt);
 margin-left: 0.9em;
 margin-right: 0.9em;
 }
