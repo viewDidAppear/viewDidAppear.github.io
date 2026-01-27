@@ -25,7 +25,8 @@ role="link"
 tabindex="0"
 data-accent="fluff"
 data-accent-contrast="fluff-accent">
-ABOUT ME
+WHO?<br/>
+誰？
 </div>
 
 <div class="tile"
@@ -34,7 +35,8 @@ role="link"
 tabindex="1"
 data-accent="poison"
 data-accent-contrast="poison-accent">
-MY HOBBIES
+HOBBIES<br/>
+趣味
 </div>
 
 <div class="tile"
@@ -43,7 +45,8 @@ role="link"
 tabindex="2"
 data-accent="busy"
 data-accent-contrast="busy-accent">
-MY LIKES
+LIKES<br/>
+好きこと
 </div>
 
 <div class="tile"
@@ -52,7 +55,8 @@ role="link"
 tabindex="3"
 data-accent="zoom"
 data-accent-contrast="zoom-accent">
-MY VALUES
+VALUES<br/>
+価値観
 </div>
 
 <div class="tile"
@@ -61,14 +65,16 @@ role="link"
 tabindex="4"
 data-accent="meeting"
 data-accent-contrast="meeting-accent">
-REVIEWS..?
+REVIEWS<br/>
+レビュー
 </div>
 
 <div class="tile"
-data-href="http://instagram.com/this_is_a_ben_desu"
+data-href="/tiles/insta"
 role="link"
 tabindex="5"
 data-accent="giraffe"
 data-accent-contrast="giraffe-accent">
-MY INSTA ;)
+INSTA ;)<br/>
+インスタ
 </div>

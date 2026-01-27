@@ -44,8 +44,15 @@ height: 100%;
 overflow-x: visible;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
 letter-spacing: -0.02em;
+margin: 0;
+}
+
+h6 {
+  font-family: "Seed-Heavy", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: lightgray;
+  margin-top: -0.5em;
 }
 
 /* --------------------
@@ -74,7 +81,7 @@ transform: translateY(0);
 .page-stage {
   overflow: hidden;
   margin-left: 2.5em;
-  top: -4em;
+  margin-top: -4em;
 }
 
 .metro-stage {
@@ -187,6 +194,29 @@ animation-delay: calc(var(--ri) * 24ms);
   will-change: transform;
 }
 
+.tile-small-ig {
+  transform-origin: center center; /* default */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  padding: 0;
+  position: relative;
+  opacity: 1;
+  max-width: 512pt;
+  max-height: 512pt;
+
+  transition:
+    transform 120ms ease,
+    opacity 0.35s ease,
+    filter 0.35s ease;
+
+  will-change: transform;
+}
+
 .tile-small img {
   width: 512pt;
   height: 512pt;
@@ -240,6 +270,38 @@ margin-left: 0.9em;
 margin-right: 0.9em;
 }
 
+.reviews p {
+line-height: 1.6;
+font-size: 1rem;
+font-weight: 500;
+letter-spacing: -0.04em;
+font-family: "Seed-Regular", sans-serif !important;
+width: 100;
+max-width: 1000px;
+font-size: clamp(34pt, 12vw, 38pt);
+margin-left: 0.9em;
+margin-right: 0.9em;
+}
+
+.reviews p span {
+  line-height: 1.6;
+font-size: 1rem;
+font-weight: 800;
+letter-spacing: -0.04em;
+font-family: "Seed-Bold", sans-serif !important;
+font-size: clamp(28pt, 8vw, 32pt);
+}
+
+.reviews p i {
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-family: "Seed-Bold", sans-serif !important;
+  font-size: clamp(28pt, 8vw, 32pt);
+  color: gray;
+}
+
 .bio p span {
   line-height: 1.6;
 font-size: 1rem;
@@ -270,18 +332,72 @@ transform-style: flat !important;
 backface-visibility: visible !important;
 }
 
+.ig {
+  fill: var(--accent-contrast);
+  width: 384pt;
+  aspect-ratio: 1 / 1;
+}
+
 #footer {
   display: grid;
   grid-template-columns: repeat(1, minmax(640px, 320px));
   padding-top: 1.5em;
 }
 
+.wp8-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+min-height: 3em;
+padding: 0 2em;
+
+border: 0.15em solid #000;
+background: transparent;
+
+color: #000;
+font-weight: 700;
+text-decoration: none;
+text-transform: none;
+letter-spacing: 0.02em;
+
+cursor: pointer;
+user-select: none;
+
+transition:
+background-color 120ms ease,
+color 120ms ease;
+font-family: "Seed-Regular", sans-serif !important;
+font-size: clamp(18pt, 4vw, 22pt);
+}
+
+/* Hover (desktop) */
+.wp8-button:hover {
+background-color: #000;
+color: #fff;
+}
+
+/* Active / tap (mobile & desktop) */
+.wp8-button:active {
+background-color: #000;
+color: #fff;
+}
+
+.wp8-button {
+-webkit-tap-highlight-color: transparent;
+}
+
+.bio .wp8-button {
+  margin-left: 1.5em;
+}
+
 @font-face {
 font-family: "Seed-Regular";
 src:,
 url("/assets/fonts/LINESeedSans_W_Rg.woff") format("woff"),
-url("/assets/fonts/LINESeedSans_W_Rg.woff2") format("woff2");
-font-weight: 500;
+url("/assets/fonts/LINESeedSans_W_Rg.woff2") format("woff2"),
+url("/assets/fonts/LINESeedJP_OTF_Rg.woff") format("woff"),
+url("/assets/fonts/LINESeedJP_OTF_Rg.woff2") format("woff2");
 font-style: normal;
 font-display: swap;
 }
@@ -290,8 +406,9 @@ font-display: swap;
 font-family: "Seed-Bold";
 src:
 url("/assets/fonts/LINESeedSans_W_Bd.woff") format("woff"),
-url("/assets/fonts/LINESeedSans_W_Bd.woff2") format("woff2");
-font-weight: 600;
+url("/assets/fonts/LINESeedSans_W_Bd.woff2") format("woff2"),
+url("/assets/fonts/LINESeedJP_OTF_Bd.woff") format("woff"),
+url("/assets/fonts/LINESeedJP_OTF_Bd.woff2") format("woff2");
 font-style: normal;
 font-display: swap;
 }
@@ -300,8 +417,9 @@ font-display: swap;
 font-family: "Seed-ExtraBold";
 src:
 url("/assets/fonts/LINESeedSans_W_XBd.woff") format("woff"),
-url("/assets/fonts/LINESeedSans_W_XBd.woff2") format("woff2");
-font-weight: 700;
+url("/assets/fonts/LINESeedSans_W_XBd.woff2") format("woff2"),
+url("/assets/fonts/LINESeedJP_OTF_Bd.woff") format("woff"),
+url("/assets/fonts/LINESeedJP_OTF_Bd.woff2") format("woff2");
 font-style: normal;
 font-display: swap;
 }
@@ -310,8 +428,9 @@ font-display: swap;
 font-family: "Seed-Heavy";
 src:
 url("/assets/fonts/LINESeedSans_W_He.woff") format("woff"),
-url("/assets/fonts/LINESeedSans_W_He.woff2") format("woff2");
-font-weight: 900;
+url("/assets/fonts/LINESeedSans_W_He.woff2") format("woff2"),
+url("/assets/fonts/LINESeedJP_OTF_Eb.woff") format("woff"),
+url("/assets/fonts/LINESeedJP_OTF_Eb.woff2") format("woff2");
 font-style: normal;
 font-display: swap;
 }
@@ -320,8 +439,9 @@ font-display: swap;
 font-family: "Seed-Thin";
 src:
 url("/assets/fonts/LINESeedSans_W_Th.woff") format("woff"),
-url("/assets/fonts/LINESeedSans_W_Th.woff2") format("woff2");
-font-weight: 300;
+url("/assets/fonts/LINESeedSans_W_Th.woff2") format("woff2"),
+url("/assets/fonts/LINESeedJP_OTF_Th.woff") format("woff"),
+url("/assets/fonts/LINESeedJP_OTF_Th.woff2") format("woff2");
 font-style: normal;
 font-display: swap;
 }

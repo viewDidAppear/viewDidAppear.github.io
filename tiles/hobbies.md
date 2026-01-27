@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "My Hobbies"
+title: "Hobbies"
 ---
 
 <link

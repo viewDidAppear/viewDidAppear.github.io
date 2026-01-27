@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,57 @@
 <body>
   <main class="container fluent-enter">
     <div id="metro-stage">
-      <div id="metro-page" class="home">
-        <header class="page-header hero fluent-enter delay-1">
-          <h1>Hi there</h1>
-        </header>
+    <div id="metro-page" class="home">
+      <header class="page-header hero fluent-enter delay-1">
+        <h1>Reviews</h1>
+      </header>
 
-        <div class="tiles">
-          <p>Basics about Ben (TBA)</p>
+      <link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
-        </div>
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
-        <!-- Footer -->
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff2" as="font" type="font/woff2" crossorigin="" />
+
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff" as="font" type="font/woff" crossorigin="" />
+
+<div class="page-stage">
+<div class="tile-small" data-accent="fluff" data-accent-contrast="fluff-accent">
+<img src="/assets/images/reviews.png" />
+</div>
+</div>
+
+<div class="reviews">
+	<p>Gives really good treats, and head scritches!<br /><i>—My Dog</i><br />
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</p><br />
+
+	<p>Handsome! Why do you need those piercings though? 4/5!<br /><i>—My Mum</i><br />
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+	</p><br />
+
+	<p>A genuinely really good friend. We all love you!<br /><i>—My Friends</i><br />
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</p><br />
+
+	<p>Ok, wow.<br /><i>—The guy who touched me inappropriately at Dragon</i><br />
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</p><br />
+
+	<p>Then don't come here then!<br /><i>—The chef at the Sushi-ya after I told him I'm allergic to Shrimp</i><br />
+		<span>★</span><span>★</span><span>☆</span><span>☆</span><span>☆</span>
+	</p><br />
+
+	<p>He knows like, every song lyric. How?<br /><i>—Kelly W.</i><br />
+		<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+	</p><br />
+
+	<p>次のお待ちのお客様！<br /><i>—The lady at 新宿区役所</i><br />
+		<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+	</p><br />
+</div>
+
+
+      <!-- Footer -->
   <footer id="footer">
 
 <!--     <ul class="icons">
@@ -28,7 +69,7 @@
       
     </ul> -->
 
-    <p class="copyright">&#9829; Come talk to me ;) &#9829;</p>
+    <p class="copyright">&#9829; Talk to me, work up a vibe ;) &#9829;</p>
   </footer>
 
 <!-- Scripts -->
@@ -43,37 +84,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-document.addEventListener('click', (e) => {
-const tile = e.target.closest('.tile');
-if (!tile) return;
-
-e.preventDefault();
-
-const page = document.getElementById('metro-page');
-if (!page || page.classList.contains('is-exiting')) return;
-
-const rect = page.getBoundingClientRect();
-
-// tap position normalized (-1 → 1)
-const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-
-page.style.transformOrigin = `
-${x > 0 ? '0%' : '100%'}
-${y > 0 ? '0%' : '100%'}
-`;
-
-requestAnimationFrame(() => {
-page.classList.add('is-exiting');
-page.style.transform = `scale(0.94)`;
-});
-
-setTimeout(() => {
-window.location.href = tile.href;
-}, 540);
-});
-
-const header = document.querySelector('.page-header');
+    const header = document.querySelector('.page-header');
 if (!header) {
 console.warn('No #page-header element found!');
 return;
@@ -97,7 +108,6 @@ updateHeaderHeight();
 // Update on window resize
 window.addEventListener('resize', updateHeaderHeight);
 });
-</script>
-
+  </script>
 </body>
 </html>
