@@ -188,8 +188,8 @@ animation-delay: calc(var(--ri) * 24ms);
 }
 
 .tile-small img {
-  width: 100%;
-  height: 100%;
+  width: 512pt;
+  height: 512pt;
   object-fit: contain;
 }
 
@@ -216,7 +216,7 @@ font-weight: 700;
 letter-spacing: -0.04em;
 margin-left: 0.4em;
 pointer-events: none;
-font-family: "Seed-Heavy", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+font-family: "Seed-Heavy", sans-serif !important;
 height: var(--header-height);
 line-height: var(--header-line-height);
 overflow-x: visible; /* allow overflow to the right */
@@ -232,7 +232,7 @@ line-height: 1.6;
 font-size: 1rem;
 font-weight: 500;
 letter-spacing: -0.04em;
-font-family: "Seed-Regular", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+font-family: "Seed-Regular", sans-serif !important;
 width: 100;
 max-width: 600px;
 font-size: clamp(34pt, 12vw, 38pt);
@@ -245,7 +245,7 @@ margin-right: 0.9em;
 font-size: 1rem;
 font-weight: 800;
 letter-spacing: -0.04em;
-font-family: "Seed-Bold", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+font-family: "Seed-Bold", sans-serif !important;
 font-size: clamp(28pt, 8vw, 32pt);
 }
 
@@ -253,7 +253,7 @@ font-size: clamp(28pt, 8vw, 32pt);
   display: flex;
   width: 100vw;
   text-align: center;
-  font-family: "Seed-Regular", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Seed-Regular", sans-serif !important;
   justify-content: center;
   align-items: center;
   font-size: 3em;
