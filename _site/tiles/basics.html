@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>The Basics</title>
+<title>About Me</title>
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -11,10 +11,64 @@
     <div id="metro-stage">
     <div id="metro-page" class="home">
       <header class="page-header hero fluent-enter delay-1">
-        <h1>The Basics</h1>
+        <h1>About Me</h1>
       </header>
 
-      <p>Basics about Ben (TBA)</p>
+      <div class="page-stage">
+<div class="tile-small" data-accent="fluff" data-accent-contrast="fluff-accent">
+<img src="/assets/images/me.jpg" />
+</div>
+</div>
+
+<div class="bio">
+<p>Hiiiiieeeee!<br /><br />
+
+	Thanks for scanning my QR code ;)<br /><br />
+
+	<span>Name:</span> Ben<br />
+	<span>Age:</span> 33<br />
+	<span>Country:</span> Australia<br />
+	<span>Live:</span> Tokyo (Shinjuku)<br />
+	<span>Looking for:</span> Love<br /><br />
+
+	I’m a movie lover, enjoy rainy days in bed, and can never say no to cuddles. Looking to meet a boyfriend to share adventures and quiet moments with.<br /><br />
+
+	—
+</p>
+<p>
+	こんにちワッツアップ！<br /><br />
+
+	スキャンしてくれてありがと〜ねん！<br /><br />
+
+	<span>名前:</span> ベン<br />
+	<span>年齢:</span> 33歳<br />
+	<span>出身地:</span> オーストラリア<br />
+	<span>在住:</span> 都内（新宿区）<br />
+	<span>募集:</span> 彼氏<br /><br />
+
+	映画鑑賞や雨の日にベッドでのんびりするのも好きで、抱っこも大好きです。彼氏を探しています、一緒に楽しい時間やまったりした時間を過ごせる人に出会えたら嬉しいです。 <br /><br />
+
+	よろしくね！
+</p>
+</div>
+
+
+      <!-- Footer -->
+  <footer id="footer">
+
+<!--     <ul class="icons">
+      
+      
+      <li><a href="this_is_a_ben_desu" class="icon" target="_blank"><svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
+      
+    </ul> -->
+
+    <p class="copyright">&#9829; Come talk to me ;) &#9829;</p>
+  </footer>
+
+<!-- Scripts -->
+  
+  <script src="assets/js/metro.js"></script>
 
     </div>
     </div>
@@ -23,56 +77,31 @@
   <script src="/assets/js/metro.js" defer></script>
 
   <script>
-    const header = document.getElementById('pageHeader');
-    const updateHeaderHeight = () => {
-      document.documentElement.style.setProperty(
-        '--header-height',
-        `${header.offsetHeight}px`
-      );
-    };
+    document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.page-header');
+if (!header) {
+console.warn('No #page-header element found!');
+return;
+}
 
-    updateHeaderHeight();
-    window.addEventListener('resize', updateHeaderHeight);
+const updateHeaderHeight = () => {
+const headerHeight = header.offsetHeight; // includes padding & border
+const computedStyle = window.getComputedStyle(header);
+const lineHeight = computedStyle.lineHeight;
+
+// Set CSS variables
+document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+document.documentElement.style.setProperty('--header-line-height', lineHeight);
+
+console.log(`Header height: ${headerHeight}px, line-height: ${lineHeight}`);
+};
+
+// Initial run
+updateHeaderHeight();
+
+// Update on window resize
+window.addEventListener('resize', updateHeaderHeight);
+});
   </script>
-
-  <script>
-document.addEventListener('click', (e) => {
-const tile = e.target.closest('.tile');
-if (!tile) return;
-
-e.preventDefault();
-
-const page = document.getElementById('metro-page');
-if (!page || page.classList.contains('is-exiting')) return;
-
-const rect = page.getBoundingClientRect();
-
-// tap position normalized (-1 → 1)
-const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-
-// Metro-style angles
-const rotateY = -x * 28; // left/right hinge
-const rotateX = y * 22; // up/down hinge
-
-page.style.transformOrigin = `
-${x > 0 ? '0%' : '100%'}
-${y > 0 ? '0%' : '100%'}
-`;
-
-requestAnimationFrame(() => {
-page.classList.add('is-exiting');
-page.style.transform = `
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-scale(0.94)
-`;
-});
-
-setTimeout(() => {
-window.location.href = tile.href;
-}, 540);
-});
-</script>
 </body>
 </html>

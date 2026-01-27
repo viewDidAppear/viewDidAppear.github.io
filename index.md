@@ -25,7 +25,7 @@ role="link"
 tabindex="0"
 data-accent="fluff"
 data-accent-contrast="fluff-accent">
-BASICS
+ABOUT ME
 </div>
 
 <div class="tile"
@@ -34,7 +34,7 @@ role="link"
 tabindex="1"
 data-accent="poison"
 data-accent-contrast="poison-accent">
-HOBBIES
+MY HOBBIES
 </div>
 
 <div class="tile"
@@ -43,7 +43,7 @@ role="link"
 tabindex="2"
 data-accent="busy"
 data-accent-contrast="busy-accent">
-LIKES
+MY LIKES
 </div>
 
 <div class="tile"
@@ -52,7 +52,7 @@ role="link"
 tabindex="3"
 data-accent="zoom"
 data-accent-contrast="zoom-accent">
-VALUES
+MY VALUES
 </div>
 
 <div class="tile"
@@ -61,7 +61,7 @@ role="link"
 tabindex="4"
 data-accent="meeting"
 data-accent-contrast="meeting-accent">
-REVIEWS
+REVIEWS..?
 </div>
 
 <div class="tile"
@@ -70,5 +70,5 @@ role="link"
 tabindex="5"
 data-accent="giraffe"
 data-accent-contrast="giraffe-accent">
-INSTA ;)
+MY INSTA ;)
 </div>

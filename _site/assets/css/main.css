@@ -14,7 +14,7 @@
   --medium: 220ms;
   --accent: #f4b5de; /* default */
   --accent-contrast: #fa58a7; /* default */
-  --grid-inset: 0px;
+  --grid-offset: 10px;
 }
 
 [data-accent="fluff"]   { --accent: #f4b5de; }
@@ -34,12 +34,18 @@
 /* --------------------
    BASE
 -------------------- */
-body {
-  background: var(--bg);
-  color: var(--text);
+html, body {
   transition: background var(--medium) var(--ease),
               color var(--medium) var(--ease);
-  padding: 1em;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+height: 100%;
+overflow-x: visible;
+}
+
+h1, h2, h3 {
+letter-spacing: -0.02em;
 }
 
 /* --------------------
@@ -65,28 +71,38 @@ transform: translateY(0);
 }
 }
 
-#metro-stage {
-overflow: hidden;
+.page-stage {
+  overflow: hidden;
+  margin-left: 2.5em;
+  top: -4em;
 }
 
-#metro-page {
+.metro-stage {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.metro-page {
   transform: translate3d(0,0,0);
   opacity: 1;
   filter: blur(0);
   transition:
     opacity 0.4s ease,
     filter 0.4s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 #metro-page.is-exiting {
   opacity: 0;
-  filter: blur(20px);
+  filter: blur(60px);
   pointer-events: none;
 }
 
 .tiles.is-exiting .tile {
 opacity: 0;
-filter: blur(20px);
+filter: blur(60px);
 animation-delay: calc(var(--1) * 28ms);
 pointer-events: none;
 }
@@ -102,7 +118,9 @@ pointer-events: none;
 animation-delay: calc(var(--ri) * 24ms);
 }
 
-#metro-page.is-entering {
+.fluff {
+  background: var(--accent);
+  color: var(--accent-contrast);
 }
 
 /* --------------------
@@ -111,23 +129,23 @@ animation-delay: calc(var(--ri) * 24ms);
 .tiles {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
-  position: relative;
   z-index: 1000;
-  padding-top: calc(var(--header-height, 0px) + 10px);
+  padding-left: 0px;
   width: 100%;
+  position: relative;
+  top: -4em;
 }
 
 .tile {
   transform-origin: center center; /* default */
   aspect-ratio: 1 / 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   background: var(--accent);
   padding: 0.3em;
-  border-radius: 0;
   font-weight: 900;
   font-size: 5em;
   cursor: pointer;
@@ -144,6 +162,35 @@ animation-delay: calc(var(--ri) * 24ms);
     filter 0.35s ease;
 
   will-change: transform;
+}
+
+.tile-small {
+  transform-origin: center center; /* default */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: var(--accent);
+  padding: 0;
+  position: relative;
+  opacity: 1;
+  max-width: 512pt;
+  max-height: 512pt;
+
+  transition:
+    transform 120ms ease,
+    opacity 0.35s ease,
+    filter 0.35s ease;
+
+  will-change: transform;
+}
+
+.tile-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Hover = lift */
@@ -164,38 +211,42 @@ transform: scale(0.92);
 position: relative;
 z-index: 0;
 
-font-size: clamp(4rem, 8vw, 6rem);
+font-size: 6rem;
 font-weight: 700;
-line-height: 0.85;
 letter-spacing: -0.04em;
-padding-left: var(--grid-inset);
-margin-left: -0.04em; /* optical glyph compensation */
-margin-bottom: -10vw;
+margin-left: 0.4em;
 pointer-events: none;
 font-family: "Seed-Heavy", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.page-title {
-margin: 0;
-padding-left: var(--grid-inset, 1rem);
-margin-left: -0.04em; /* glyph compensation */
+height: var(--header-height);
+line-height: var(--header-line-height);
+overflow-x: visible; /* allow overflow to the right */
+width: auto;
 }
 
 .container {
   position: relative;
 }
 
-.home,
-#metro-page {
-position: relative;
-}
-
-h1, h2, h3 {
-letter-spacing: -0.02em;
-}
-
-p {
+.bio p {
 line-height: 1.6;
+font-size: 1rem;
+font-weight: 500;
+letter-spacing: -0.04em;
+font-family: "Seed-Regular", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+width: 100;
+max-width: 1000px;
+font-size: clamp(28pt, 8vw, 32pt);
+margin-left: 0.9em;
+margin-right: 0.9em;
+}
+
+.bio p span {
+  line-height: 1.6;
+font-size: 1rem;
+font-weight: 800;
+letter-spacing: -0.04em;
+font-family: "Seed-Bold", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: clamp(28pt, 8vw, 32pt);
 }
 
 .copyright {

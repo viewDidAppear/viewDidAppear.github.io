@@ -5,16 +5,16 @@
 <body>
   <main class="container fluent-enter">
     <div id="metro-stage">
-    <div id="metro-page" class="home">
-      <header class="page-header hero fluent-enter delay-1">
-        <h1>{{ site.title }}</h1>
-      </header>
+      <div id="metro-page" class="home">
+        <header class="page-header hero fluent-enter delay-1">
+          <h1>Hi there</h1>
+        </header>
 
-      <div class="tiles">
-        {{ content }}
-      </div>
+        <div class="tiles">
+          {{ content }}
+        </div>
 
-      {% include footer.html %}
+        {% include footer.html %}
     </div>
     </div>
   </main>
@@ -22,19 +22,7 @@
   <script src="{{ '../assets/js/metro.js' | relative_url }}" defer></script>
 
   <script>
-    const header = document.getElementById('pageHeader');
-    const updateHeaderHeight = () => {
-      document.documentElement.style.setProperty(
-        '--header-height',
-        `${header.offsetHeight}px`
-      );
-    };
-
-    updateHeaderHeight();
-    window.addEventListener('resize', updateHeaderHeight);
-  </script>
-
-  <script>
+    document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('click', (e) => {
 const tile = e.target.closest('.tile');
 if (!tile) return;
@@ -50,10 +38,6 @@ const rect = page.getBoundingClientRect();
 const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
 const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
 
-// Metro-style angles
-const rotateY = -x * 28; // left/right hinge
-const rotateX = y * 22; // up/down hinge
-
 page.style.transformOrigin = `
 ${x > 0 ? '0%' : '100%'}
 ${y > 0 ? '0%' : '100%'}
@@ -61,17 +45,39 @@ ${y > 0 ? '0%' : '100%'}
 
 requestAnimationFrame(() => {
 page.classList.add('is-exiting');
-page.style.transform = `
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-scale(0.94)
-`;
+page.style.transform = `scale(0.94)`;
 });
 
 setTimeout(() => {
 window.location.href = tile.href;
 }, 540);
 });
+
+const header = document.querySelector('.page-header');
+if (!header) {
+console.warn('No #page-header element found!');
+return;
+}
+
+const updateHeaderHeight = () => {
+const headerHeight = header.offsetHeight; // includes padding & border
+const computedStyle = window.getComputedStyle(header);
+const lineHeight = computedStyle.lineHeight;
+
+// Set CSS variables
+document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+document.documentElement.style.setProperty('--header-line-height', lineHeight);
+
+console.log(`Header height: ${headerHeight}px, line-height: ${lineHeight}`);
+};
+
+// Initial run
+updateHeaderHeight();
+
+// Update on window resize
+window.addEventListener('resize', updateHeaderHeight);
+});
 </script>
+
 </body>
 </html>

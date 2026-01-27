@@ -9,6 +9,8 @@
       </header>
 
       {{ content }}
+
+      {% include footer.html %}
     </div>
     </div>
   </main>
@@ -16,56 +18,31 @@
   <script src="{{ '../assets/js/metro.js' | relative_url }}" defer></script>
 
   <script>
-    const header = document.getElementById('pageHeader');
-    const updateHeaderHeight = () => {
-      document.documentElement.style.setProperty(
-        '--header-height',
-        `${header.offsetHeight}px`
-      );
-    };
+    document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.page-header');
+if (!header) {
+console.warn('No #page-header element found!');
+return;
+}
 
-    updateHeaderHeight();
-    window.addEventListener('resize', updateHeaderHeight);
+const updateHeaderHeight = () => {
+const headerHeight = header.offsetHeight; // includes padding & border
+const computedStyle = window.getComputedStyle(header);
+const lineHeight = computedStyle.lineHeight;
+
+// Set CSS variables
+document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+document.documentElement.style.setProperty('--header-line-height', lineHeight);
+
+console.log(`Header height: ${headerHeight}px, line-height: ${lineHeight}`);
+};
+
+// Initial run
+updateHeaderHeight();
+
+// Update on window resize
+window.addEventListener('resize', updateHeaderHeight);
+});
   </script>
-
-  <script>
-document.addEventListener('click', (e) => {
-const tile = e.target.closest('.tile');
-if (!tile) return;
-
-e.preventDefault();
-
-const page = document.getElementById('metro-page');
-if (!page || page.classList.contains('is-exiting')) return;
-
-const rect = page.getBoundingClientRect();
-
-// tap position normalized (-1 → 1)
-const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-
-// Metro-style angles
-const rotateY = -x * 28; // left/right hinge
-const rotateX = y * 22; // up/down hinge
-
-page.style.transformOrigin = `
-${x > 0 ? '0%' : '100%'}
-${y > 0 ? '0%' : '100%'}
-`;
-
-requestAnimationFrame(() => {
-page.classList.add('is-exiting');
-page.style.transform = `
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-scale(0.94)
-`;
-});
-
-setTimeout(() => {
-window.location.href = tile.href;
-}, 540);
-});
-</script>
 </body>
 </html>

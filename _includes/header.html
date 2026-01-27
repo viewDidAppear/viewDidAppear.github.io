@@ -1,0 +1,31 @@
+<header class="page-header hero fluent-enter delay-1">
+  <h1>{{ page.title }}</h1>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const header = document.getElementById('page-header');
+if (!header) return; // safety: element must exist
+
+const updateHeaderHeight = () => {
+// offsetHeight is read-only, automatically provided by the browser
+const headerHeight = header.offsetHeight;
+
+console.log(headerHeight);
+
+// Set CSS variable
+document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+
+// Get line-height of text
+const lineHeight = window.getComputedStyle(header).lineHeight;
+document.documentElement.style.setProperty('--header-line-height', lineHeight);
+
+console.log(`Header height: ${headerHeight}px, line-height: ${lineHeight}`);
+};
+
+updateHeaderHeight();
+
+// Update on resize (optional)
+window.addEventListener('resize', updateHeaderHeight);
+});
+</script>
