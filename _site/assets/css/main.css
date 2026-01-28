@@ -257,7 +257,8 @@ width: auto;
   position: relative;
 }
 
-.bio p {
+.bio p,
+.button-holder p {
 line-height: 1.6;
 font-size: 1rem;
 font-weight: 500;
@@ -268,6 +269,12 @@ max-width: 1000px;
 font-size: clamp(34pt, 12vw, 38pt);
 margin-left: 0.9em;
 margin-right: 0.9em;
+}
+
+.button-holder p {
+  font-weight: 900;
+letter-spacing: -0.04em;
+font-family: "Seed-Bold", sans-serif !important;
 }
 
 .reviews p {
@@ -342,6 +349,13 @@ backface-visibility: visible !important;
   display: grid;
   grid-template-columns: repeat(1, minmax(640px, 320px));
   padding-top: 1.5em;
+}
+
+.button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .wp8-button {

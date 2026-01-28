@@ -57,16 +57,18 @@ data-accent-contrast="fluff-accent">
 	噛まへんから安心してw。。<br/><br/>
 	でも、ちゃんとお願いされたら…話は別やが笑
 </p>
+</div>
 
-<a
-href="https://instagram.com/this_is_a_ben_desu"
-class="wp8-button"
-target="_blank"
-onclick="resetWP8Button(this)"
-rel="noopener noreferrer"
->
-Instagramへ
-</a>
+<div class="button-holder">
+	<p>クリックしてたらIGが開く<br/></p>
+	<a href="https://instagram.com/this_is_a_ben_desu"
+		class="wp8-button"
+		target="_blank"
+		onclick="resetWP8Button(this)"
+		rel="noopener noreferrer"
+	>
+		@this_is_a_ben_desu
+	</a>
 </div>
 
 <script>
