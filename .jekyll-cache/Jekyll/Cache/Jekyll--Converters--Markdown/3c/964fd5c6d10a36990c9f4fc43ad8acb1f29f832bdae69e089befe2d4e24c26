@@ -1,0 +1,46 @@
+I"�<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
+
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff2" as="font" type="font/woff2" crossorigin="" />
+
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff" as="font" type="font/woff" crossorigin="" />
+
+<div class="page-stage">
+<div class="tile-small" data-accent="fluff" data-accent-contrast="fluff-accent">
+<img src="/assets/images/insta.png" />
+</div>
+</div>
+
+<div class="bio">
+<p>Add me on IG!<br /><br />
+
+	Sliiiiiide into my DMs, I welcome it. Let's go for coffee, or just... come talk to me here! You scanned me. I don't bite, unless you ask nicely anyway. ;)<br /><br />
+
+	—
+</p>
+<p>インスタでフォローしてね！<br /><br />
+	DM大歓迎です！<br />
+	コーヒー行こ？<br />
+	それとも、とりあえずここで話そ？スキャンしてくれたからさ<br />
+	噛まへんから安心してw。。<br /><br />
+	でも、ちゃんとお願いされたら…話は別やが笑
+</p>
+
+<a href="https://instagram.com/this_is_a_ben_desu" class="wp8-button" target="_blank" onclick="resetWP8Button(this)" rel="noopener noreferrer">
+Instagramへ
+</a>
+</div>
+
+<script>
+function resetWP8Button(el) {
+el.classList.add('reset');
+
+// Force a repaint so :active is dropped
+requestAnimationFrame(() => {
+el.classList.remove('reset');
+});
+}
+</script>
+
+:ET

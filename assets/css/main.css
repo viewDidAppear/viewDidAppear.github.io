@@ -371,13 +371,7 @@ font-family: "Seed-Regular", sans-serif !important;
 font-size: clamp(18pt, 4vw, 22pt);
 }
 
-/* Hover (desktop) */
-.wp8-button:hover {
-background-color: #000;
-color: #fff;
-}
-
-/* Active / tap (mobile & desktop) */
+.wp8-button:hover,
 .wp8-button:active {
 background-color: #000;
 color: #fff;
@@ -387,8 +381,62 @@ color: #fff;
 -webkit-tap-highlight-color: transparent;
 }
 
+.wp8-button.reset {
+background-color: transparent !important;
+color: #000 !important;
+}
+
 .bio .wp8-button {
   margin-left: 1.5em;
+}
+
+.home .wp8-back-button {
+  margin-left: 4em;
+  margin-top: 8em;
+}
+
+.wp8-back-button {
+width: 120pt;
+height: 120pt;
+min-width: 120pt;
+min-height: 120pt;
+
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+border: 8px solid #000;
+border-radius: 50%;
+background: transparent;
+
+color: #000;
+cursor: pointer;
+user-select: none;
+padding: 0;
+
+transition:
+background-color 120ms ease,
+color 120ms ease;
+
+-webkit-tap-highlight-color: transparent;
+}
+
+.wp8-back-button svg {
+width: 64pt;
+height: 64pt;
+
+fill: none;
+stroke: currentColor;
+stroke-width: 3;
+stroke-linecap: square;
+stroke-linejoin: miter;
+}
+
+/* Hover + Tap */
+.wp8-back-button:hover,
+.wp8-back-button:active {
+background-color: #000;
+color: #fff;
 }
 
 @font-face {
