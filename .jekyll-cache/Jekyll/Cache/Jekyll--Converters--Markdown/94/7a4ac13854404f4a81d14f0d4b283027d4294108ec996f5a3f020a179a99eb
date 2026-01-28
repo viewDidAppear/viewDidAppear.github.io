@@ -1,4 +1,4 @@
-I"�<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+I"4<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
 <link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
@@ -25,6 +25,11 @@ VALUES<br />
 <div class="tile" data-href="/tiles/reviews" role="link" tabindex="4" data-accent="meeting" data-accent-contrast="meeting-accent">
 REVIEWS<br />
 レビュー
+</div>
+
+<div class="tile" data-href="/tiles/music" role="link" tabindex="4" data-accent="core" data-accent-contrast="core-accent">
+MUSIC<br />
+好きな音楽
 </div>
 
 <div class="tile" data-href="/tiles/insta" role="link" tabindex="5" data-accent="giraffe" data-accent-contrast="giraffe-accent">

@@ -37,9 +37,14 @@ crossorigin
 
 <div class="page-stage">
 <div class="tile-small"
-data-accent="fluff"
-data-accent-contrast="fluff-accent">
+data-accent="zoom"
+data-accent-contrast="zoom-accent">
 <img src="/assets/images/values.png"/>
+</div>
+
+<div class="tile-mini"
+data-accent="zoom"
+data-accent-contrast="zoom-accent">
 </div>
 </div>
 

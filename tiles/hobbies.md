@@ -37,9 +37,14 @@ crossorigin
 
 <div class="page-stage">
 <div class="tile-small"
-data-accent="fluff"
-data-accent-contrast="fluff-accent">
+data-accent="poison"
+data-accent-contrast="poison-accent">
 <img src="/assets/images/hobbies.png"/>
+</div>
+
+<div class="tile-mini"
+data-accent="poison"
+data-accent-contrast="poison-accent">
 </div>
 </div>
 

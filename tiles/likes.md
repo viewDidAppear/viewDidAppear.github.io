@@ -37,16 +37,21 @@ crossorigin
 
 <div class="page-stage">
 <div class="tile-small"
-data-accent="fluff"
-data-accent-contrast="fluff-accent">
+data-accent="busy"
+data-accent-contrast="busy-accent">
 <img src="/assets/images/likes.png"/>
+</div>
+
+<div class="tile-mini"
+data-accent="busy"
+data-accent-contrast="busy-accent">
 </div>
 </div>
 
 <div class="bio">
-<p>What do I like in terms of love?<br/><br/>
+<p>What do I like?<br/><br/>
 
-	I deeply appreciate someone who makes time for me. I will always make time for you, even if I'm very busy. If we really want to see each other, we will make it work.<br/><br/>
+	In terms of love, I deeply appreciate someone who makes time for me. I will always make time for you, even if I'm very busy. If we really want to see each other, we will make it work.<br/><br/>
 
 	Guys who know how to communicate! Oh boy, this one is so important. Let's tell each other how we feel, always. No filter. Let's talk to each other about our work, family, or our relationship at all times.<br/><br/>
 
@@ -56,12 +61,14 @@ data-accent-contrast="fluff-accent">
 
 	I'm mostly top, but if the vibe is right, I can switch. But that's a discussion for later ;)<br/><br/>
 
+	Otherwise, I like music. A lot. I recently saw Mother Monster (Lady Gaga) live in concert, and sang every damn word till the point I lost my voice! 2026 will be a great year for music. We have Robyn(!!!!), Madonna, Slayyyter (of CRANK fame) and Agnes and Cobrah dropping new albums. My poor ears won't get a rest.<br/><br/>
+
 	—
 </p>
 <p>
-	恋愛において、何を大事にしているかな〜<br/><br/>
+	何が好きかな〜<br/><br/>
 
-	時間を作ってくれる人をとても大切に思います。俺も、どんなに忙しくても時間を作ります。本当に会いたいと思ったら、うまくやりくりしますね。<br/><br/>
+	恋愛において、時間を作ってくれる人をとても大切に思います。俺も、どんなに忙しくても時間を作ります。本当に会いたいと思ったら、うまくやりくりしますね。<br/><br/>
 
 	コミュニケーションが上手な男性！これ、本当に大事です。お互いに感じていることはいつでも伝えましょう。遠慮せず、正直に。仕事や家族、うちらの関係についても、常に話し合える関係が理想です。<br/><br/>
 
@@ -70,5 +77,9 @@ data-accent-contrast="fluff-accent">
 	ロマンチックなジェスチャーも悪くないですねw。好きなことに気づいてくれたり、ありえないほどシンプルなコーヒーの好み（アメリカーノ、アイス）を覚えてくれたりするだけで、メロメロになっちゃう〜〜。<br/><br/>
 
 	フツーはタチですが、雰囲気が合えばウケもできる。それはまた後で話しましょうwwww<br/><br/>
+
+	それ以外だと、音楽が大好きです。本当に大好き。最近はLADY GAGAのライブに行って、声が枯れるまで全曲歌いました（笑）本気で。2026年は音楽的に最高の一年になりそうです。<br/>
+	Robyn（!!!!）、マドンナ、CRANKでおなじみのSlayyyter、そしてAgnesとCobrahの新作アルバムがリリースされる！
+	私の耳は、しばらく休ませてもらえなさそうです。<br/><br/>
 </p>
 </div>

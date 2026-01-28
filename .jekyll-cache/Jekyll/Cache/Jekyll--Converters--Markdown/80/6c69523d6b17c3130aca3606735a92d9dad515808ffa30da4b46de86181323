@@ -1,4 +1,4 @@
-I"H<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+I"¨<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
 <link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
@@ -7,8 +7,11 @@
 <link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff" as="font" type="font/woff" crossorigin="" />
 
 <div class="page-stage">
-<div class="tile-small" data-accent="fluff" data-accent-contrast="fluff-accent">
+<div class="tile-small" data-accent="giraffe" data-accent-contrast="giraffe-accent">
 <img src="/assets/images/insta.png" />
+</div>
+
+<div class="tile-mini" data-accent="giraffe" data-accent-contrast="giraffe-accent">
 </div>
 </div>
 

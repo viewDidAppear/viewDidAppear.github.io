@@ -41,6 +41,11 @@ data-accent="fluff"
 data-accent-contrast="fluff-accent">
 <img src="/assets/images/me.jpg"/>
 </div>
+
+<div class="tile-mini"
+data-accent="fluff"
+data-accent-contrast="fluff-accent">
+</div>
 </div>
 
 <div class="bio">

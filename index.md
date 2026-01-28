@@ -70,6 +70,16 @@ REVIEWS<br/>
 </div>
 
 <div class="tile"
+data-href="/tiles/music"
+role="link"
+tabindex="4"
+data-accent="core"
+data-accent-contrast="core-accent">
+MUSIC<br/>
+好きな音楽
+</div>
+
+<div class="tile"
 data-href="/tiles/insta"
 role="link"
 tabindex="5"
