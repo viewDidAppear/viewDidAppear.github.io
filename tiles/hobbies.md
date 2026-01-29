@@ -41,11 +41,6 @@ data-accent="poison"
 data-accent-contrast="poison-accent">
 <img src="/assets/images/hobbies.png"/>
 </div>
-
-<div class="tile-mini"
-data-accent="poison"
-data-accent-contrast="poison-accent">
-</div>
 </div>
 
 <div class="bio">

@@ -37,14 +37,9 @@ crossorigin
 
 <div class="page-stage">
 <div class="tile-small"
-data-accent="giraffe"
+data-accent="valencia"
 data-accent-contrast="giraffe-accent">
 <img src="/assets/images/insta.png"/>
-</div>
-
-<div class="tile-mini"
-data-accent="giraffe"
-data-accent-contrast="giraffe-accent">
 </div>
 </div>
 

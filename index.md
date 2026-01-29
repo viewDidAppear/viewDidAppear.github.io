@@ -72,9 +72,9 @@ REVIEWS<br/>
 <div class="tile"
 data-href="/tiles/music"
 role="link"
-tabindex="4"
-data-accent="core"
-data-accent-contrast="core-accent">
+tabindex="5"
+data-accent="valencia"
+data-accent-contrast="valencia-accent">
 MUSIC<br/>
 好きな音楽
 </div>
@@ -82,9 +82,9 @@ MUSIC<br/>
 <div class="tile"
 data-href="/tiles/insta"
 role="link"
-tabindex="5"
-data-accent="giraffe"
-data-accent-contrast="giraffe-accent">
+tabindex="6"
+data-accent="core"
+data-accent-contrast="core-accent">
 INSTA ;)<br/>
 インスタ
 </div>

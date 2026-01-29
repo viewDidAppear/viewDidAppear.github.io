@@ -41,11 +41,6 @@ data-accent="busy"
 data-accent-contrast="busy-accent">
 <img src="/assets/images/likes.png"/>
 </div>
-
-<div class="tile-mini"
-data-accent="busy"
-data-accent-contrast="busy-accent">
-</div>
 </div>
 
 <div class="bio">

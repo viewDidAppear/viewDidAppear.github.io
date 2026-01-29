@@ -41,11 +41,6 @@ data-accent="fluff"
 data-accent-contrast="fluff-accent">
 <img src="/assets/images/reviews.png"/>
 </div>
-
-<div class="tile-mini"
-data-accent="meeting"
-data-accent-contrast="meeting-accent">
-</div>
 </div>
 
 <div class="reviews">

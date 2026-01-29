@@ -1,4 +1,4 @@
-I"ä<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
+I"Œ<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
 <link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
@@ -9,9 +9,6 @@
 <div class="page-stage">
 <div class="tile-small" data-accent="fluff" data-accent-contrast="fluff-accent">
 <img src="/assets/images/me.jpg" />
-</div>
-
-<div class="tile-mini" data-accent="fluff" data-accent-contrast="fluff-accent">
 </div>
 </div>
 

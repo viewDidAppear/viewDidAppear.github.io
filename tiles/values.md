@@ -41,11 +41,6 @@ data-accent="zoom"
 data-accent-contrast="zoom-accent">
 <img src="/assets/images/values.png"/>
 </div>
-
-<div class="tile-mini"
-data-accent="zoom"
-data-accent-contrast="zoom-accent">
-</div>
 </div>
 
 <div class="bio">

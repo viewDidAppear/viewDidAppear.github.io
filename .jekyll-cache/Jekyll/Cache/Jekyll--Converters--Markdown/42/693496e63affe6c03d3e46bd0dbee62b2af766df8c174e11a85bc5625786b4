@@ -1,50 +1,19 @@
----
-layout: page
-title: "Music"
----
+I"<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff2" as="font" type="font/woff2" crossorigin="" />
 
-<link
-rel="preload"
-href="/assets/fonts/LINESeedSans_W_He.woff2"
-as="font"
-type="font/woff2"
-crossorigin
->
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_He.woff" as="font" type="font/woff" crossorigin="" />
 
-<link
-rel="preload"
-href="/assets/fonts/LINESeedSans_W_He.woff"
-as="font"
-type="font/woff"
-crossorigin
->
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff2" as="font" type="font/woff2" crossorigin="" />
 
-<link
-rel="preload"
-href="/assets/fonts/LINESeedSans_W_Rg.woff2"
-as="font"
-type="font/woff2"
-crossorigin
->
-
-<link
-rel="preload"
-href="/assets/fonts/LINESeedSans_W_Rg.woff"
-as="font"
-type="font/woff"
-crossorigin
->
+<link rel="preload" href="/assets/fonts/LINESeedSans_W_Rg.woff" as="font" type="font/woff" crossorigin="" />
 
 <div class="page-stage">
-<div class="tile-small"
-data-accent="valencia"
-data-accent-contrast="valencia-accent">
-<img src="/assets/images/music.png"/>
+<div class="tile-small" data-accent="valencia" data-accent-contrast="valencia-accent">
+<img src="/assets/images/music.png" />
 </div>
 </div>
 
 <div class="bio">
-<p>Here're some of the things I'm enjoying right now.<br/><br/>
+<p>Here're some of the things I'm enjoying right now.<br /><br />
 
 	—
 </p>
@@ -143,3 +112,5 @@ el.classList.remove('reset');
 });
 }
 </script>
+
+:ET
